@@ -68,6 +68,12 @@ stages:
               command: 'plan'  # Run terraform plan
               environmentServiceNameAzureRM: $(azureServiceConnection)  # Azure service connection for authentication
               workingDirectory: 'terraform'  # Set the working directory
+              
+          # Publish the Terraform state as an artifact
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: 'terraform'
+              artifactName: 'terraform-state'
 
   # Stage 3: Apply (with manual approval)
   - stage: Apply
