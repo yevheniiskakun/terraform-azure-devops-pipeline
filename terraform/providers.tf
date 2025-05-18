@@ -12,7 +12,7 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "skink-rg"
-    storage_account_name = "skinktfstate"
+    storage_account_name = "skinktfstate1"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
   }
