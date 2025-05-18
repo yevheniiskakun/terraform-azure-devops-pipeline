@@ -7,7 +7,7 @@ pool:
   name: 'Default'
 
 variables:
-  terraformVersion: '1.5.5'  # Specify the Terraform version
+  terraformVersion: '1.12.0'  # Specify the Terraform version
   azureServiceConnection: 'azurerm'  # Azure service connection name
   backendResourceGroup: 'skink-rg' # Remote backend Resource Group
   backendStorageAccount: 'skinktfstate'  # Remote backend storage account
