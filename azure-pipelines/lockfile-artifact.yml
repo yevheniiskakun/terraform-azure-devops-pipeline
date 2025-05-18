@@ -23,6 +23,10 @@ stages:
           - task: TerraformInstaller@0  # Install Terraform
             inputs:
               terraformVersion: $(terraformVersion)
+          - script: |
+              chmod -R +x .terraform
+            displayName: 'Fix permissions on .terraform directory'
+            workingDirectory: 'terraform'
 
           # Initialize Terraform
           - task: TerraformTaskV4@4
